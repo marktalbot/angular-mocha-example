@@ -1,10 +1,18 @@
-var jsdom = require('jsdom')
+var jsdom = require('jsdom');
 
-var document = jsdom.jsdom('<!doctype html><html><body></body></html>');
+const { JSDOM } = jsdom;
+// console.log('------------------------------------------')
+// console.log(jsdom)
+// console.log('------------------------------------------')
 
-var window = document.defaultView;
+// var document = jsdom.jsdom('<!doctype html><html><body></body></html>');
+var dom = new JSDOM('<!doctype html><html><body></body></html>');
 
-global.document = document;
+// var window = document.defaultView;
+var window = dom.window;
+
+// global.document = document;
+global.document = window.document;
 global.HTMLElement = window.HTMLElement;
 global.XMLHttpRequest = window.XMLHttpRequest;
 

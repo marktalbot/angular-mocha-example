@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { expect } from 'chai';
 import { spy } from 'sinon';
 
-describe(`AppComponent ${i}`, () => {
+describe(`AppComponent`, () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [AppComponent]
