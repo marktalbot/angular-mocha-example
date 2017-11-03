@@ -8,7 +8,7 @@ import '../assets/css/styles.css';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    value = 0;
+    private value: number = 0;
 
     onIncrementClick() {
         this.value = Math.min(100, ++this.value);
